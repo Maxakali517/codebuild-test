@@ -6,7 +6,7 @@ phases:
       - echo "Hello, CodeBuild!"
       - echo "This is a sample build."
       - grep -q "mogemoge" sample.txt
+      - cat sample.txt | tr [:lower:] [:upper:] > sample2.txt
 artifacts:
   files:
-    - '**/*'
-
+    - sample2.txt

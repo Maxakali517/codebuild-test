@@ -5,3 +5,4 @@ phases:
     commands:
       - echo "Hello, CodeBuild!"
       - echo "This is a sample build."
+      - grep -q "mogemoge" sample.txt

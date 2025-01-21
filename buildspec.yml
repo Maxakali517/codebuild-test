@@ -1,12 +1,13 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - go version
   build:
     commands:
-      - echo "Hello, CodeBuild!"
-      - echo "This is a sample build."
-      - grep -q "mogemoge" sample.txt
-      - cat sample.txt | tr [:lower:] [:upper:] > sample2.txt
+      - echo "BuildStarted"
+      - go build -o main.exe ./main.go
 artifacts:
   files:
-    - sample2.txt
+    - main.exe
